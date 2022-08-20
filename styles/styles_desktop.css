@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('../polices/Shrikhand/Shrikhand-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../polices/Roboto/Roboto-Medium.ttf')
+}
+
+*{
+    font-family: 'Roboto', Times, serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
