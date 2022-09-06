@@ -1,0 +1,73 @@
+.menu{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    border-radius: 70px 70px 0 0;
+    background-color: map-get($input-palette-gris, bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px 0;
+    &__heading{
+        width: 90%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        h1{
+           @include input-font-family (title); 
+           font-weight: 400;
+           font-size: 320%;
+        }      
+        i{
+            font-size: 270%;
+            color: map-get($input-palette-gris, title-text);
+        }  
+    }
+    &__block{
+        width: 85%;
+        h2{    
+            width: 107%;
+            @include input-font-family (secondary-txt);
+            color: map-get($input-palette-gris, title-text);
+            font-weight: 400;
+            font-size: 170%;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px 0;
+        &--card{
+            width: 100%;
+            padding: 20px;
+            padding-right: 30px;
+            border-radius: 20px 20px 20px 20px;
+            background-color: $color-white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            @include global-shadow;
+            .card__presentation{                
+                h3{
+                    margin-bottom: 10px;
+                    @include title;
+                    font-size: 160%;
+                }
+                &--quote{
+                    @include input-font-family (secondary-txt);
+                    color: map-get($input-palette-gris, title-text);
+                    font-size: 130%;
+                }
+            }
+            .card__price{
+                @include input-font-family (secondary-txt);
+                color: map-get($input-palette-gris, title-text);
+                font-weight: bold;
+                font-size: 135%;
+            }
+        }
+    }
+    &__btn{
+        margin-top: 40px;
+        margin-bottom: 15px
+    }
+}

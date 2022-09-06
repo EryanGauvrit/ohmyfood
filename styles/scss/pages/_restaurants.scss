@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 10%;
+    padding: 10% 0 15% 0;
     gap: 30px 0;    
     background-color: map-get($input-palette-gris, bg);
     @media (min-width: 701px) {
@@ -28,12 +28,13 @@
     border-radius: 15px 15px 15px 15px;
     background-color: $color-white;
     position: relative;
+    @include global-shadow;
     @media (min-width: 701px) {
         width: 35%;        
         height: 30%;
         padding-bottom: 1.5%;
     }   
-    .restaurants__card--picture{
+    &--picture{
         height: 70%;
         border-radius: 15px 15px 0 0;
         position: relative;
@@ -46,7 +47,7 @@
             transform: translate(-50%, -50%);
         }
     }
-    .restaurants__card--quote{
+    &--quote{
         display: flex;
         justify-content: space-between;
         margin: 3% 7% 0 5%;
@@ -60,7 +61,7 @@
             }
             p{
                 @include secondary-txt;
-                font-size: 95%;
+                font-size: 150%;
             }
         }
         i{
@@ -78,7 +79,7 @@
             } 
         }
     }
-    .restaurants__card--new{
+    &--new{
         position: absolute;
         font-size: 160%;
         padding: 1.5% 2.5% 1% 2.5%;

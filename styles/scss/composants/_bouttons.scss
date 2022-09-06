@@ -8,6 +8,7 @@
     background-image: linear-gradient(to bottom, map-get($input-palette-violets, rose), map-get($input-palette-violets, violet));
     color: $color-white;
     font-size: map-get($smartphone-font-size, secondary-txt);
+    @include global-shadow;
     @media (min-width: 701px) {
         width: 50%;
         font-size: map-get($desktop-font-size, secondary-txt);

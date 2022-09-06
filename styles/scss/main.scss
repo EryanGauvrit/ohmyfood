@@ -10,8 +10,13 @@
 @import './pages/explore-block';
 @import './pages/operation';
 @import'./pages/restaurants';
+@import'./pages/menu-block';
 
 // Modifications sur tout le site
+
+body{
+    position: relative;
+}
 
 *{
     @include input-font-family (page);

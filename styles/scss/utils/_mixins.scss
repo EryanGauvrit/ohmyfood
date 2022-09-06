@@ -53,3 +53,7 @@
 @mixin shadow {
     box-shadow: 1px 0.5px 20px map-get($input-palette-gris, shadow); 
 }
+
+@mixin global-shadow {
+    box-shadow: 0px 0px 15px map-get($input-palette-gris, global-shadow);
+}

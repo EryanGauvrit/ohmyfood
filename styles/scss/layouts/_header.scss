@@ -12,10 +12,8 @@ header{
         padding: 2% 2%;   
         @include shadow; 
         img{  
-            min-width: none;
             width: 40%;            
-            @media (min-width: 701px) {
-                min-width: 0;          
+            @media (min-width: 701px) {         
                 width: 30%;
             }
         }   

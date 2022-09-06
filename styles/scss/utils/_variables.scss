@@ -10,6 +10,7 @@ $color-white: white;
             title-text: darken($color-grey, 60%),
             title-bg: $color-grey,
             shadow: darken($color-grey,35%),
+            global-shadow: darken($color-grey,15%),
             bg: lighten($color-grey,7%),
             secondary-txt: darken($color-grey, 50%)
         );

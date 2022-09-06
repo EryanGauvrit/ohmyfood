@@ -20,6 +20,7 @@
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: white;
   font-size: 180%;
+  box-shadow: 0px 0px 15px #b8b8b8;
 }
 @media (min-width: 701px) {
   .main-btn {
@@ -42,12 +43,10 @@ header figure {
   box-shadow: 1px 0.5px 20px #858585;
 }
 header figure img {
-  min-width: none;
   width: 40%;
 }
 @media (min-width: 701px) {
   header figure img {
-    min-width: 0;
     width: 30%;
   }
 }
@@ -146,6 +145,7 @@ header .header__title p {
   }
 }
 .menu-picture img {
+  margin-top: -50px;
   height: 118%;
 }
 @media (min-width: 701px) {
@@ -221,6 +221,7 @@ footer ul li a {
   width: 90%;
   margin-bottom: 2%;
   font-weight: 300;
+  font-family: "Roboto-regular", Arial;
 }
 @media (min-width: 701px) {
   footer ul li a {
@@ -230,6 +231,7 @@ footer ul li a {
 }
 footer ul li a i {
   margin-right: 2%;
+  width: 30px;
 }
 @media (min-width: 701px) {
   footer ul li a i {
@@ -289,7 +291,7 @@ footer ul li a i {
   justify-content: center;
   margin-bottom: 7%;
 }
-.operation .operation__title {
+.operation__title {
   margin-bottom: 5%;
   margin-left: 5%;
   width: 100%;
@@ -298,12 +300,12 @@ footer ul li a i {
   color: black;
 }
 @media (max-width: 600px) {
-  .operation .operation__title {
+  .operation__title {
     font-size: 190%;
   }
 }
 @media (max-width: 600px) {
-  .operation .operation__title {
+  .operation__title {
     margin-bottom: 7%;
   }
 }
@@ -321,7 +323,7 @@ footer ul li a i {
     flex-wrap: nowrap;
   }
 }
-.operation__list .operation__list--item {
+.operation__list--item {
   align-items: center;
   margin: auto;
   border-radius: 30px;
@@ -329,18 +331,18 @@ footer ul li a i {
   background-color: #f0f0f0;
   padding: 8% 5% 8% 5%;
   position: relative;
-  box-shadow: 1px 0.5px 20px #858585;
+  box-shadow: 0px 0px 15px #b8b8b8;
   font-size: 120%;
   cursor: pointer;
 }
-.operation__list .operation__list--item:hover {
+.operation__list--item:hover {
   background-color: #e9ddf8;
 }
-.operation__list .operation__list--item:hover i {
+.operation__list--item:hover i {
   color: #9356DC;
 }
 @media (min-width: 701px) {
-  .operation__list .operation__list--item {
+  .operation__list--item {
     font-size: 110%;
     padding: 3% 1% 3% 1%;
     min-width: 0;
@@ -349,7 +351,7 @@ footer ul li a i {
     margin-bottom: 5%;
   }
 }
-.operation__list .operation__list--item p {
+.operation__list--item p {
   font-size: 90%;
   text-align: center;
   border-radius: 100%;
@@ -361,27 +363,27 @@ footer ul li a i {
   top: 35%;
 }
 @media (min-width: 701px) {
-  .operation__list .operation__list--item p {
+  .operation__list--item p {
     left: -4%;
     top: 35%;
     padding: 2.5% 3.5% 2.5% 3.5%;
   }
 }
-.operation__list .operation__list--item i {
+.operation__list--item i {
   font-size: 145%;
   color: #5f5f5f;
   margin-left: 8%;
 }
 @media (min-width: 701px) {
-  .operation__list .operation__list--item i {
+  .operation__list--item i {
     margin-left: 10%;
   }
 }
-.operation__list .operation__list--item h3 {
+.operation__list--item h3 {
   margin-left: 8%;
 }
 @media (min-width: 701px) {
-  .operation__list .operation__list--item h3 {
+  .operation__list--item h3 {
     margin-left: 10%;
   }
 }
@@ -392,7 +394,7 @@ footer ul li a i {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 10%;
+  padding: 10% 0 15% 0;
   gap: 30px 0;
   background-color: #f0f0f0;
 }
@@ -425,6 +427,7 @@ footer ul li a i {
   border-radius: 15px 15px 15px 15px;
   background-color: white;
   position: relative;
+  box-shadow: 0px 0px 15px #b8b8b8;
 }
 @media (min-width: 701px) {
   .restaurants__card {
@@ -433,61 +436,61 @@ footer ul li a i {
     padding-bottom: 1.5%;
   }
 }
-.restaurants__card .restaurants__card--picture {
+.restaurants__card--picture {
   height: 70%;
   border-radius: 15px 15px 0 0;
   position: relative;
   overflow: hidden;
 }
-.restaurants__card .restaurants__card--picture img {
+.restaurants__card--picture img {
   width: 130%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.restaurants__card .restaurants__card--quote {
+.restaurants__card--quote {
   display: flex;
   justify-content: space-between;
   margin: 3% 7% 0 5%;
 }
-.restaurants__card .restaurants__card--quote .card__quote--txt h4 {
+.restaurants__card--quote .card__quote--txt h4 {
   margin-bottom: 2%;
   font-size: 160%;
 }
 @media (min-width: 701px) {
-  .restaurants__card .restaurants__card--quote .card__quote--txt h4 {
+  .restaurants__card--quote .card__quote--txt h4 {
     font-size: 100%;
   }
 }
-.restaurants__card .restaurants__card--quote .card__quote--txt p {
+.restaurants__card--quote .card__quote--txt p {
   font-size: 1.35rem;
   color: #5f5f5f;
   font-family: "Roboto-regular";
-  font-size: 95%;
+  font-size: 150%;
 }
 @media (max-width: 600px) {
-  .restaurants__card .restaurants__card--quote .card__quote--txt p {
+  .restaurants__card--quote .card__quote--txt p {
     font-size: 180%;
   }
 }
-.restaurants__card .restaurants__card--quote i {
+.restaurants__card--quote i {
   font-size: 200%;
   cursor: pointer;
   transition: 1.3s;
   height: 5%;
   margin-top: 2.5%;
 }
-.restaurants__card .restaurants__card--quote i:hover {
+.restaurants__card--quote i:hover {
   color: white;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
 }
 @media (min-width: 701px) {
-  .restaurants__card .restaurants__card--quote i {
+  .restaurants__card--quote i {
     font-size: 120%;
   }
 }
-.restaurants__card .restaurants__card--new {
+.restaurants__card--new {
   position: absolute;
   font-size: 160%;
   padding: 1.5% 2.5% 1% 2.5%;
@@ -498,9 +501,92 @@ footer ul li a i {
   border-radius: 3px 3px 3px 3px;
 }
 @media (min-width: 701px) {
-  .restaurants__card .restaurants__card--new {
+  .restaurants__card--new {
     font-size: 80%;
   }
+}
+
+.menu {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 120px;
+  border-radius: 70px 70px 0 0;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px 0;
+}
+.menu__heading {
+  width: 90%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.menu__heading h1 {
+  font-family: "Shrikhand", Arial;
+  font-weight: 400;
+  font-size: 320%;
+}
+.menu__heading i {
+  font-size: 270%;
+  color: #454545;
+}
+.menu__block {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px 0;
+}
+.menu__block h2 {
+  width: 107%;
+  font-family: "Roboto-regular", Arial;
+  color: #454545;
+  font-weight: 400;
+  font-size: 170%;
+}
+.menu__block--card {
+  width: 100%;
+  padding: 20px;
+  padding-right: 30px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  box-shadow: 0px 0px 15px #b8b8b8;
+}
+.menu__block--card .card__presentation h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+  font-size: 160%;
+}
+@media (max-width: 600px) {
+  .menu__block--card .card__presentation h3 {
+    font-size: 190%;
+  }
+}
+.menu__block--card .card__presentation--quote {
+  font-family: "Roboto-regular", Arial;
+  color: #454545;
+  font-size: 130%;
+}
+.menu__block--card .card__price {
+  font-family: "Roboto-regular", Arial;
+  color: #454545;
+  font-weight: bold;
+  font-size: 135%;
+}
+.menu__btn {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+body {
+  position: relative;
 }
 
 * {
