@@ -1,0 +1,35 @@
+@import './base/polices';
+@import './utils/variables';
+@import './utils/fonctions';
+@import './utils/mixins';
+@import './utils/placeholder';
+@import './composants/bouttons';
+@import './layouts/header';
+@import './layouts/menu-picture';
+@import './layouts/footer';
+@import './pages/explore-block';
+@import './pages/operation';
+@import'./pages/restaurants';
+
+// Modifications sur tout le site
+
+*{
+    @include input-font-family (page);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    @include normal-style-list;
+}
+
+a{
+    @include normal-style-link;
+}
+
+h1, h2, h3, h4, p {
+    @include normal-style-title;
+}

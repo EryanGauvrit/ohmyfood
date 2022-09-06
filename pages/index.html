@@ -3,51 +3,127 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stysheet" href="../styles/normalize.css">
-        <link rel="stylesheet" href="../styles/styles_desktop.css">
-        <link rel="stylesheet" media="all and (max-width: 768px)" href="../styles/styles_smartphones.css">
-        <link rel="stylesheet" media="all and (min-width: 768px) and (max-width: 992px) " href="../styles/styles_tablettes.css">
+        <link rel="stylesheet" href="../styles/css/normalize.css">
+        <link rel="stylesheet" href="../styles/css/style.css">
         <title>Ohmyfood - accueil</title>
     </head>
     <body>
         <!-- Header -->
         <header>
-            <figure><img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood !"></figure>
-            <a href="#">
-                <i class="fa-solid fa-location-dot"></i>
+            <figure><img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood"></figure>
+            <a href="#" class="header__title">
+                <i class="fa-solid fa-location-dot title__icon"></i>
                 <p>Paris, Belleville</p>
             </a>
         </header>
 
         <!-- Explore button-->
-        <div>
+        <div class="explore-block">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <button class="main-btn">Explorer nos restaurants</button>
         </div>
 
-        <!-- Working principle block-->
-        <nav>
-            <ul>
-                <li><h2>Fonctionnement</h2></li>
-                <li>
+        <!-- Operation block-->
+        <section class="operation">
+            <h2 class="operation__title">Fonctionnement</h2>
+
+            <ul class="operation__list">
+                <li class="operation__list--item">
                     <p>1</p>
                     <i class="fa-solid fa-mobile-screen-button"></i>
                     <h3>Choisissez un restaurant</h3>
                 </li>
-                <li>
+                <li class="operation__list--item">
                     <p>2</p>
                     <i class="fa-solid fa-list-ul"></i>
                     <h3>Composez votre menu</h3>
                 </li>
-                <li>
+                <li class="operation__list--item">
                     <p>3</p>
                     <i class="fa-solid fa-store"></i>
                     <h3>Dégustez au restaurant</h3>
                 </li>
-            </ul>
-        </nav>
+                </ul>
+        </section>
 
+        <!-- Restaurants list block -->
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <!-- card one -->
+            <a href="./menu-la-palette-du-gout.html" class="restaurants__card">
+                <div class="restaurants__card--picture">
+                    <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût"/>
+                </div>
+                <div class="restaurants__card--quote">
+                    <div class="card__quote--txt">
+                        <h4>La palette du goût</h4>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <p class="restaurants__card--new">Nouveau</p>
+            </a>
+
+            <!-- card two -->
+            <a href="./menu-la-note-enchantee.html" class="restaurants__card">
+                <div class="restaurants__card--picture">
+                    <img src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée"/>
+                </div>
+                <div class="restaurants__card--quote">
+                    <div class="card__quote--txt">
+                        <h4>La note enchantée</h4>
+                        <p>Charonne</p>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <p class="restaurants__card--new">Nouveau</p>
+            </a>
+
+            <!-- card three -->
+            <a href="./menu-a-la-francaise.html" class="restaurants__card">
+                <div class="restaurants__card--picture">
+                    <img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française"/>
+                </div>
+                <div class="restaurants__card--quote">
+                    <div class="card__quote--txt">
+                        <h4>A la française</h4>
+                        <p>Cité Rouge</p>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </a>
+
+            <!-- card four -->
+            <a href="./menu-le-delice-des-sens.html" class="restaurants__card">
+                <div class="restaurants__card--picture">
+                    <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens"/>
+                </div>
+                <div class="restaurants__card--quote">
+                    <div class="card__quote--txt">
+                        <h4>Le délice des sens</h4>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </a>
+        </section>
+
+        <footer>
+            <h2>ohmyfood</h2>
+            <ul>
+                <li><a href="#">
+                    <i class="fa-solid fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </a></li>
+                <li><a href="#">
+
+                    <p>Devenir partenaire</p>
+                </a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </footer>
 
         <script src="https://kit.fontawesome.com/bf7b1eaeaa.js" crossorigin="anonymous"></script>
     </body>

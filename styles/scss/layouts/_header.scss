@@ -1,0 +1,85 @@
+//header
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    figure{
+        text-align: center;        
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 2% 2%;   
+        @include shadow; 
+        img{  
+            min-width: none;
+            width: 40%;            
+            @media (min-width: 701px) {
+                min-width: 0;          
+                width: 30%;
+            }
+        }   
+    }
+
+    .header__title{
+        justify-content: flex-start;                
+        gap: 0 15px;
+        padding: 2.5% 2.5%;
+        padding-left: 30%;
+        background-color: map-get($input-palette-gris, title-bg);  
+        font-weight: 500;
+        color: map-get($input-palette-gris, title-text);
+        cursor: pointer;
+        @media (min-width: 701px) {                            
+        justify-content: center;
+        padding-left: 2.5%;
+        }      
+        .title__icon{
+            width: 8%;
+            font-size: map-get($smartphone-font-size, medium-icon);
+            @media (min-width: 701px){
+                width: 4%;
+                font-size: map-get($desktop-font-size, medium-icon);
+            }
+        }
+        p{
+            @include important-txt;
+            width: 60%;
+            font-size: map-get($smartphone-font-size, important-txt);
+            @media (min-width: 701px){
+                font-size: map-get($desktop-font-size, important-txt);
+                width: auto;
+            }
+             
+        }
+    }
+}
+
+.header__logo{
+    margin: 0;
+    padding: 35px 0 20px 0;
+    box-shadow: none;
+    @media (min-width: 701px){
+        @include shadow;
+        padding-bottom: 30px;        
+    }        
+    img{
+        width: 45%;
+        @media (min-width: 701px){
+        width: 30%;
+        }
+    }        
+}
+
+    .back-link__arrow{
+        position: absolute;
+        top: 40%;
+        left: 7%;
+        font-size: 185%;
+        color: map-get($input-palette-gris, title-text);
+        @media (min-width: 701px){
+            left: 5%;
+            font-size: 160%;
+        }
+    }
+

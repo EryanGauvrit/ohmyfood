@@ -1,0 +1,15 @@
+.main-btn{
+    padding: 4% 2% 4% 2%;
+    border: 0;
+    border-radius: 50px;
+    width: 60%;
+    max-width: 500px;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, map-get($input-palette-violets, rose), map-get($input-palette-violets, violet));
+    color: $color-white;
+    font-size: map-get($smartphone-font-size, secondary-txt);
+    @media (min-width: 701px) {
+        width: 50%;
+        font-size: map-get($desktop-font-size, secondary-txt);
+    }
+}
