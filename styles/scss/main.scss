@@ -14,10 +14,6 @@
 
 // Modifications sur tout le site
 
-body{
-    position: relative;
-}
-
 *{
     @include input-font-family (page);
 }

@@ -11,20 +11,20 @@
   src: url("../polices/Roboto/Roboto-Regular.ttf");
 }
 .main-btn {
-  padding: 4% 2% 4% 2%;
+  padding: 20px;
   border: 0;
   border-radius: 50px;
-  width: 60%;
-  max-width: 500px;
+  width: 295px;
   cursor: pointer;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: white;
-  font-size: 180%;
+  font-size: 145%;
   box-shadow: 0px 0px 15px #b8b8b8;
 }
 @media (min-width: 701px) {
   .main-btn {
-    width: 50%;
+    padding: 30px 15px 30px 15px;
+    width: 300px;
     font-size: 1.35rem;
   }
 }
@@ -129,33 +129,19 @@ header .header__title p {
 
 .menu-picture {
   width: 100%;
-  height: 400px;
-  overflow: hidden;
+  height: 500px;
   margin: 0;
 }
-@media (min-width: 701px) {
-  .menu-picture {
-    width: 650px;
-    height: 400px;
-    margin: auto;
-    margin-top: 3%;
-    text-align: center;
-    position: relative;
-    border-radius: 15px 15px 15px 15px;
-  }
-}
 .menu-picture img {
-  margin-top: -50px;
-  height: 118%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 @media (min-width: 701px) {
   .menu-picture img {
-    height: 110%;
-    border-radius: 15px 15px 15px 15px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    object-position: center;
   }
 }
 
@@ -405,6 +391,11 @@ footer ul li a i {
     gap: 30px;
   }
 }
+@media (min-width: 1364px) {
+  .restaurants {
+    gap: 50px 20%;
+  }
+}
 .restaurants h2 {
   font-weight: bold;
   font-size: 2rem;
@@ -432,8 +423,10 @@ footer ul li a i {
 @media (min-width: 701px) {
   .restaurants__card {
     width: 35%;
+    max-width: 435px;
     height: 30%;
-    padding-bottom: 1.5%;
+    max-height: 170px;
+    padding-bottom: 2%;
   }
 }
 .restaurants__card--picture {
@@ -460,7 +453,7 @@ footer ul li a i {
 }
 @media (min-width: 701px) {
   .restaurants__card--quote .card__quote--txt h4 {
-    font-size: 100%;
+    font-size: 130%;
   }
 }
 .restaurants__card--quote .card__quote--txt p {
@@ -472,6 +465,11 @@ footer ul li a i {
 @media (max-width: 600px) {
   .restaurants__card--quote .card__quote--txt p {
     font-size: 180%;
+  }
+}
+@media (min-width: 701px) {
+  .restaurants__card--quote .card__quote--txt p {
+    font-size: 120%;
   }
 }
 .restaurants__card--quote i {
@@ -508,20 +506,36 @@ footer ul li a i {
 
 .menu {
   width: 100%;
-  padding-top: 50px;
   padding-bottom: 120px;
   border-radius: 70px 70px 0 0;
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px 0;
+  margin-top: -12vh;
+}
+@media (min-width: 701px) {
+  .menu {
+    margin-top: 0;
+    border-radius: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .menu__heading {
   width: 90%;
+  padding: 34px 5% 50px 5%;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  background-color: #f0f0f0;
+  border-radius: 70px 70px 0 0;
+}
+@media (min-width: 701px) {
+  .menu__heading {
+    width: 80%;
+  }
 }
 .menu__heading h1 {
   font-family: "Shrikhand", Arial;
@@ -534,10 +548,22 @@ footer ul li a i {
 }
 .menu__block {
   width: 85%;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px 0;
+}
+@media (min-width: 701px) {
+  .menu__block {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 425px;
+    margin-right: 25px;
+    margin-left: 25px;
+    gap: 0;
+  }
 }
 .menu__block h2 {
   width: 107%;
@@ -545,6 +571,11 @@ footer ul li a i {
   color: #454545;
   font-weight: 400;
   font-size: 170%;
+}
+@media (min-width: 701px) {
+  .menu__block h2 {
+    font-size: 130%;
+  }
 }
 .menu__block--card {
   width: 100%;
@@ -569,10 +600,20 @@ footer ul li a i {
     font-size: 190%;
   }
 }
+@media (min-width: 701px) {
+  .menu__block--card .card__presentation h3 {
+    font-size: 100%;
+  }
+}
 .menu__block--card .card__presentation--quote {
   font-family: "Roboto-regular", Arial;
   color: #454545;
   font-size: 130%;
+}
+@media (min-width: 701px) {
+  .menu__block--card .card__presentation--quote {
+    font-size: 85%;
+  }
 }
 .menu__block--card .card__price {
   font-family: "Roboto-regular", Arial;
@@ -580,13 +621,20 @@ footer ul li a i {
   font-weight: bold;
   font-size: 135%;
 }
+@media (min-width: 701px) {
+  .menu__block--card .card__price {
+    font-size: 95%;
+  }
+}
 .menu__btn {
   margin-top: 40px;
   margin-bottom: 15px;
 }
-
-body {
-  position: relative;
+@media (min-width: 701px) {
+  .menu__btn {
+    margin-right: 35%;
+    margin-left: 35%;
+  }
 }
 
 * {
