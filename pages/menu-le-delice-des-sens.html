@@ -3,12 +3,138 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/styles_desktop.css">
-        <link rel="stylesheet" media="all and (max-width: 768px)" href="../styles/styles_smartphones.css">
-        <link rel="stylesheet" media="all and (min-width: 768px) and (max-width: 992px) " href="../styles/styles_tablettes.css">
-        <title>Ohmyfood - accueil</title>
+        <link rel="stylesheet" href="../styles/css/normalize.css">
+        <link rel="stylesheet" href="../styles/css/style.css">
+        <title>Ohmyfood - Le délice des sens</title>
     </head>
     <body>
+
+        <!-- Header -->
+        <header class="header__menu">
+            <a href="./index.html" class="header__back-link">
+                <i class="fa-solid fa-arrow-left back-link__arrow"></i>
+            </a>
+            <figure class="header__logo"><img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood"></figure>
+            
+        </header>
+
+        <!-- Header picture-->
+        <figure class="menu-picture">
+            <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Illustration restaurant Le délice des sens"/>
+        </figure>
+
+        <!-- Menu block -->
+        <main class="menu">            
+            <div class="menu__heading">
+                <h1>Le délice des sens</h1>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            
+            <!-- Starter block -->
+            <section class="menu__block">
+                <h2>ENTRÉES</h2>
+                <div class="menu__block--card">
+                    <div class="card__presentation">
+                        <h3>Tartare de thon</h3>
+                        <p class="card__presentation--quote">Assaisonné au yuzu</p>  
+                    </div>
+                    <p class="card__price">25€</p> 
+                </div>
+
+                <div class="menu__block--card">
+                    <div class="card__presentation">
+                        <h3>Bouchée de homard croustillant</h3>
+                        <p class="card__presentation--quote">Et sa farandole de petits légumes</p>  
+                    </div>
+                    <p class="card__price">35€</p> 
+                </div>
+
+                <div class="menu__block--card">
+                    <div class="card__presentation">
+                        <h3>Velouté de cèpes</h3>
+                        <p class="card__presentation--quote">Aux truffes</p>  
+                    </div>
+                    <p class="card__price">20€</p> 
+                </div>                               
+            </section>
+            <!-- Main course block -->
+            <section class="menu__block">
+                <h2>PLATS</h2>
+
+                <div class="menu__block--card">
+                    <div class="card__presentation">
+                        <h3>Poulet rôti aux herbes de Provence</h3>
+                        <p class="card__presentation--quote">Et sa crème de truffe</p>  
+                    </div>
+                    <p class="card__price">40€</p> 
+                </div>
+
+                <div class="menu__block--card">
+                    <div class="card__presentation">
+                        <h3>Langouste rôtie</h3>
+                        <p class="card__presentation--quote">Et ses légumes de saison</p>  
+                    </div>
+                    <p class="card__price">35€</p> 
+                </div>
+                
+                <div class="menu__block--card">
+                    <div class="card__presentation">
+                        <h3>Côte de boeuf Angus</h3>
+                        <p class="card__presentation--quote">Et sa purée de panais</p>  
+                    </div>
+                    <p class="card__price">44€</p> 
+                </div>
+
+            </section>
+            <!-- Dessert block -->
+            <section class="menu__block">
+                <h2>DESSERTS</h2>
+                
+                <div class="menu__block--card">
+                    <div class="card__presentation">
+                        <h3>Farandole de desserts</h3>
+                        <p class="card__presentation--quote">Du chef</p>  
+                    </div>
+                    <p class="card__price">18€</p> 
+                </div>
+
+                <div class="menu__block--card">
+                    <div class="card__presentation">
+                        <h3>Crème brulée</h3>
+                        <p class="card__presentation--quote">Revisité</p>  
+                    </div>
+                    <p class="card__price">22€</p> 
+                </div>
+                
+                <div class="menu__block--card">
+                    <div class="card__presentation">
+                        <h3>Tiramisu</h3>
+                        <p class="card__presentation--quote">À la noisette</p>  
+                    </div>
+                    <p class="card__price">23€</p> 
+                </div>
+
+            </section>
+
+            <button class="main-btn menu__btn">Commander</button> 
+
+        </main>
+
+        <footer>
+            <h2>ohmyfood</h2>
+            <ul>
+                <li><a href="#">
+                    <i class="fa-solid fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <p>Devenir partenaire</p>
+                </a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </footer>
 
         <script src="https://kit.fontawesome.com/bf7b1eaeaa.js" crossorigin="anonymous"></script>
     </body>
