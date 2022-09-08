@@ -32,23 +32,6 @@
     };
 }
 
-// textes
-@mixin important-txt {
-    font-size: map-get($desktop-font-size, important-txt);
-    @media (max-width: 600px){
-        font-size: map-get($smartphone-font-size, important-txt);
-    };
-}
-
-@mixin secondary-txt {
-    font-size: map-get($desktop-font-size, secondary-txt);
-    color: map-get($input-palette-gris, secondary-txt);
-    font-family: map-get($input-font-family, secondary-txt);
-    @media (max-width: 600px){
-        font-size: map-get($smartphone-font-size, secondary-txt);
-    };
-}
-
 // shadow
 @mixin shadow {
     box-shadow: 1px 0.5px 20px map-get($input-palette-gris, shadow); 
@@ -56,4 +39,8 @@
 
 @mixin global-shadow {
     box-shadow: 0px 0px 15px map-get($input-palette-gris, global-shadow);
+}
+
+@mixin animation-shadow {
+    box-shadow: 0 0 10px map-get($input-palette-gris, animation-shadow);
 }

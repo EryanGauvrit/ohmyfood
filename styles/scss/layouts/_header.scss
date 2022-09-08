@@ -23,7 +23,7 @@ header{
         justify-content: flex-start;                
         gap: 0 15px;
         padding: 2.5% 2.5%;
-        padding-left: 30%;
+        padding-left: 33%;
         background-color: map-get($input-palette-gris, title-bg);  
         font-weight: 500;
         color: map-get($input-palette-gris, title-text);
@@ -41,8 +41,7 @@ header{
             }
         }
         p{
-            @include important-txt;
-            width: 60%;
+            width: 85%;
             font-size: map-get($smartphone-font-size, important-txt);
             @media (min-width: 701px){
                 font-size: map-get($desktop-font-size, important-txt);

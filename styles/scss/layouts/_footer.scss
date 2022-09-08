@@ -18,7 +18,7 @@ footer{
         font-weight: 400;
         @media (min-width: 701px) {
             margin-bottom: 3%;
-            font-size: 240%;
+            font-size: 185%;
             margin-left: 15%;
         }
     }
@@ -41,17 +41,25 @@ footer{
                 font-size: 145%;
                 width: 90%;
                 margin-bottom: 2%;
-                font-weight: 300;
                 @include input-font-family (secondary-txt);
                 @media (min-width: 701px) {
-                    font-size: 170%;
-                    margin-bottom: 5%;
+                    font-size: 115%;
+                    margin-bottom: 5%;                    
+                }
+                &:hover{
+                    text-decoration: underline;
+                }
+                p{
+                    @include input-font-family (secondary-txt);
                 }
                 i{
                     margin-right: 2%;
                     width: 30px;
                     @media (min-width: 701px) {
                         margin-right: 5%;
+                    }
+                    &:hover{
+                        text-decoration: none;
                     }
                 }
             }

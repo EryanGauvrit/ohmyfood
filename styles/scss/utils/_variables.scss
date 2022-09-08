@@ -11,6 +11,7 @@ $color-white: white;
             title-bg: $color-grey,
             shadow: darken($color-grey,35%),
             global-shadow: darken($color-grey,15%),
+            animation-shadow:darken($color-grey,40%),
             bg: lighten($color-grey,7%),
             secondary-txt: darken($color-grey, 50%)
         );
@@ -20,6 +21,8 @@ $color-white: white;
             violet: $color-primary,
             rose: $color-secondary,
             violet-clair: lighten($color-primary, 32%),
+            violet-hover: lighten($color-primary, 4%),
+            rose-hover: lighten($color-secondary,4%)
         );
 
     //Palettes de verts
@@ -54,12 +57,12 @@ $small-icon-font-size: 100%;
 
     // Smartphone
 // textes
-$smartphone-title-font-size: 190%;
-$smartphone-important-txt-font-size: 165%;
+$smartphone-title-font-size: 140%;
+$smartphone-important-txt-font-size: 105%;
 $smartphone-secondary-txt-font-size: 180%;
 //icons
 $smartphone-large-icon-font-size: 140%;
-$smartphone-medium-icon-font-size: 160%;
+$smartphone-medium-icon-font-size: 110%;
 $smartphone-small-icon-font-size: 100%;
 
 

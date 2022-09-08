@@ -1,0 +1,19 @@
+.before-heart{
+    opacity: 1;
+    transition: all 0.3s;
+    &:hover{
+        opacity: 0;
+    }
+}
+
+.after-heart{    
+    color: transparent;
+    background-image: linear-gradient(to bottom, map-get($input-palette-violets, violet), map-get($input-palette-violets, rose));
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 0.3s;
+    &:hover{
+        opacity: 1;
+    }
+}

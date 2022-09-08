@@ -28,7 +28,7 @@
     height: 24%;
     max-height: 315px;
     padding-bottom: .5%;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px;
     background-color: $color-white;
     position: relative;
     @include global-shadow;
@@ -54,38 +54,41 @@
     }
     &--quote{
         display: flex;
-        justify-content: space-between;
         margin: 3% 7% 0 5%;
+        position: relative;
         .card__quote--txt{
             h4{
                 margin-bottom: 2%;
-                font-size: 160%;
+                font-size: 150%;
                 @media (min-width: 701px) {
                     font-size: 130%;
                 } 
             }
             p{
-                @include secondary-txt;
                 font-size: 150%;
+                @include input-font-family (secondary-txt);
+                color: map-get($input-palette-gris, secondary-txt);
                 @media (min-width: 701px) {
                     font-size: 120%;
                 } 
             }
         }
-        i{
-            font-size: 200%;
-            cursor: pointer;
-            transition: 1.3s;
-            height: 5%;
-            margin-top: 2.5%;
-            &:hover{
-                color: $color-white;
-                background-image: linear-gradient(to bottom, map-get($input-palette-violets, violet), map-get($input-palette-violets, rose));
+        .card__quote--icon{
+
+            i{
+                font-size: 200%;
+                cursor: pointer;
+                height: 50px;
+                margin-top: 2.5%;     
+                position: absolute;
+                top: 0;
+                right: 15px;       
+                @media (min-width: 701px) {
+                font-size: 150%;
+                } 
             }
-            @media (min-width: 701px) {
-                font-size: 120%;
-            } 
         }
+        
     }
     &--new{
         position: absolute;

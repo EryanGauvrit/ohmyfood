@@ -22,18 +22,26 @@
         justify-content: space-between;
         background-color: map-get($input-palette-gris, bg);
         border-radius: 70px 70px 0 0;
+        position: relative;
         @media (min-width: 701px) {
             width: 80%;
         } 
         h1{
            @include input-font-family (title); 
            font-weight: 400;
-           font-size: 320%;
         }      
         i{
-            font-size: 270%;
+            height: 60px;
+            font-size: 190%;
             color: map-get($input-palette-gris, title-text);
+            position: absolute;
+            top: 35px;
+            right: 5%;
+            cursor: pointer;
         }  
+        .transparent-heart{
+            color: transparent;
+        }
     }
     &__block{
         width: 85%;
@@ -63,27 +71,39 @@
         }        
         &--card{
             width: 100%;
-            padding: 20px;
-            padding-right: 30px;
-            border-radius: 20px 20px 20px 20px;
+            border-radius: 20px;
             background-color: $color-white;
             display: flex;
             align-items: flex-end;
-            justify-content: space-between;
             @include global-shadow;
-            .card__presentation{                
+            overflow: hidden;
+            &:hover .card__check {
+                transform: translateX(0);
+            }
+            &:hover .card__check i{
+                transform: rotate(2turn);
+            }
+            &:hover .card__price{
+                transform: translateX(0);
+            }
+            .card__presentation{   
+                padding: 20px; 
+                margin-top: auto;
+                margin-bottom: auto;            
                 h3{
+                    text-overflow: ellipsis;
                     margin-bottom: 10px;
                     @include title;
-                    font-size: 160%;
+                    font-size: 140%;
                     @media (min-width: 701px) {
                         font-size: 100%;
                     } 
                 }
                 &--quote{
+                    text-overflow: ellipsis;
                     @include input-font-family (secondary-txt);
                     color: map-get($input-palette-gris, title-text);
-                    font-size: 130%;
+                    font-size: 110%;
                     @media (min-width: 701px) {
                         font-size: 85%;
                     } 
@@ -93,11 +113,42 @@
                 @include input-font-family (secondary-txt);
                 color: map-get($input-palette-gris, title-text);
                 font-weight: bold;
-                font-size: 135%;
+                font-size: 120%;
+                margin-top: auto;
+                margin-bottom: 2rem;
+                margin-right: 1rem;
+                margin-left: auto;
+                transform: translateX(4rem);
+                transition: all 0.5s;
                 @media (min-width: 701px) {
                     font-size: 95%;
                 } 
             }
+            .card__check{
+                align-self: center;
+                border-radius: 0 20px 20px 0;
+                width: 4rem;
+                height: 7rem;
+                display: flex;
+                align-items: center;
+                background-color: map-get($input-palette-verts, vert-clair);
+                transform: translateX(4rem);
+                transition: all .5s;
+                @media (max-width: 415px) {
+                    height: 8rem;
+                    width: 5rem;
+                    transform: translateX(5rem);
+                } 
+                i{
+                    margin: auto;
+                    padding: 5px;
+                    border-radius: 50px;                    
+                    color: map-get($input-palette-verts, vert-clair);
+                    background-color: $color-white;
+                    transform: rotate(0);
+                    transition: all 0.5s;
+                }
+            }            
         }
     }
     &__btn{

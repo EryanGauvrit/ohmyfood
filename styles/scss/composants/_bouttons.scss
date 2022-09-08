@@ -8,9 +8,34 @@
     color: $color-white;
     font-size: 145%;
     @include global-shadow;
+    position: relative;
+    z-index: 1;
+    transform: scale(1);
+    transition: all 0.3s;
     @media (min-width: 701px) {
         padding: 30px 15px 30px 15px;
         width: 300px;
         font-size: map-get($desktop-font-size, secondary-txt);
     }
+    &:hover{
+        transform: scale(1.05);
+        &::after{
+            opacity: 1;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        @include animation-shadow;
+        background-image: linear-gradient(to bottom, map-get($input-palette-violets, rose-hover), map-get($input-palette-violets, violet-hover));
+        transition: all 0.3s;
+        opacity: 0;
+        z-index: -1;
+        border-radius: 50px;
+    }
+    
 }

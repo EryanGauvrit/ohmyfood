@@ -9,7 +9,7 @@
         width: 100%;
         @include title;
         @media (max-width: 600px) {
-            margin-bottom: 7%;
+            margin-bottom: 7%; 
         } 
     }
 }
@@ -34,9 +34,12 @@
         position: relative;
         @include global-shadow;
         font-size: 120%;
+        transform: scale(1);
+        transition: all 0.3s;
         cursor: pointer;
         &:hover{
             background-color: map-get($input-palette-violets, violet-clair);
+            transform: scale(1.05);
             i {
                 color: map-get($input-palette-violets, violet);
             }
@@ -75,6 +78,7 @@
         }
         h3{
             margin-left: 8%;
+            font-size: 100%;
             @media (min-width: 701px) {
                 margin-left: 10%;
             }

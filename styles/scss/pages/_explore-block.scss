@@ -19,7 +19,9 @@
         text-align: center;
         margin-bottom: 4%;
         width: 80%;
-        @include secondary-txt;
+        font-size: 130%;
+        @include input-font-family (secondary-txt);
+        color: map-get($input-palette-gris, secondary-txt);
         @media (min-width: 701px) {
             width: 88%;
         }
