@@ -53,8 +53,8 @@
         @media (min-width: 701px) {
             flex-direction: row;
             flex-wrap: wrap;
-            width: 350px;            
-            height: 460px;
+            width: 400px;            
+            height: 550px;
             margin-right: 25px;
             margin-left: 25px;
             gap: 0;
@@ -70,6 +70,11 @@
             } 
         }        
         &--card{
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}){
+                    animation-delay: 0.2s * $i;
+                }
+            }
             width: 100%;
             border-radius: 20px;
             background-color: $color-white;
@@ -77,6 +82,7 @@
             align-items: flex-end;
             @include global-shadow;
             overflow: hidden;
+            animation: card-apparition .8s;
             &:hover .card__check {
                 transform: translateX(0);
             }
@@ -119,7 +125,7 @@
                 margin-right: 1rem;
                 margin-left: auto;
                 transform: translateX(4rem);
-                transition: all 0.5s;
+                transition: all 0.5s $transition-duration;
                 @media (min-width: 701px) {
                     font-size: 95%;
                 } 
@@ -132,8 +138,8 @@
                 display: flex;
                 align-items: center;
                 background-color: map-get($input-palette-verts, vert-clair);
-                transform: translateX(4rem);
-                transition: all .5s;
+                transform: translateX(4.2rem);
+                transition: all .5s $transition-duration;
                 @media (max-width: 415px) {
                     height: 8rem;
                     width: 5rem;
@@ -146,7 +152,7 @@
                     color: map-get($input-palette-verts, vert-clair);
                     background-color: $color-white;
                     transform: rotate(0);
-                    transition: all 0.5s;
+                    transition: all 0.5s $transition-duration;
                 }
             }            
         }

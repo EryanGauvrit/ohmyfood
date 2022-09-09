@@ -10,6 +10,34 @@
   font-family: "Roboto-regular";
   src: url("../polices/Roboto/Roboto-Regular.ttf");
 }
+.before-heart {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.before-heart:hover {
+  opacity: 0;
+}
+
+.after-heart {
+  color: transparent;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.after-heart:hover {
+  opacity: 1;
+}
+
+@keyframes card-apparition {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 * {
   font-family: "Roboto", Arial;
 }
@@ -76,26 +104,6 @@ h1, h2, h3, h4, p {
   opacity: 0;
   z-index: -1;
   border-radius: 50px;
-}
-
-.before-heart {
-  opacity: 1;
-  transition: all 0.3s;
-}
-.before-heart:hover {
-  opacity: 0;
-}
-
-.after-heart {
-  color: transparent;
-  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 0.3s;
-}
-.after-heart:hover {
-  opacity: 1;
 }
 
 header {
@@ -628,8 +636,8 @@ footer ul li a i:hover {
   .menu__block {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 350px;
-    height: 460px;
+    width: 400px;
+    height: 550px;
     margin-right: 25px;
     margin-left: 25px;
     gap: 0;
@@ -655,6 +663,19 @@ footer ul li a i:hover {
   align-items: flex-end;
   box-shadow: 0px 0px 15px #b8b8b8;
   overflow: hidden;
+  animation: card-apparition 0.8s;
+}
+.menu__block--card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.menu__block--card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menu__block--card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.menu__block--card:nth-child(4) {
+  animation-delay: 0.8s;
 }
 .menu__block--card:hover .card__check {
   transform: translateX(0);
@@ -709,7 +730,7 @@ footer ul li a i:hover {
   margin-right: 1rem;
   margin-left: auto;
   transform: translateX(4rem);
-  transition: all 0.5s;
+  transition: all 0.5s cubic-bezier(0.37, 0.05, 0, 0.91);
 }
 @media (min-width: 701px) {
   .menu__block--card .card__price {
@@ -724,8 +745,8 @@ footer ul li a i:hover {
   display: flex;
   align-items: center;
   background-color: #99E2D0;
-  transform: translateX(4rem);
-  transition: all 0.5s;
+  transform: translateX(4.2rem);
+  transition: all 0.5s cubic-bezier(0.37, 0.05, 0, 0.91);
 }
 @media (max-width: 415px) {
   .menu__block--card .card__check {
@@ -741,7 +762,7 @@ footer ul li a i:hover {
   color: #99E2D0;
   background-color: white;
   transform: rotate(0);
-  transition: all 0.5s;
+  transition: all 0.5s cubic-bezier(0.37, 0.05, 0, 0.91);
 }
 .menu__btn {
   margin-top: 40px;
