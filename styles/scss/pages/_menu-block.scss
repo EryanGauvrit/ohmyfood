@@ -65,9 +65,19 @@
             color: map-get($input-palette-gris, title-text);
             font-weight: 400;
             font-size: 170%;
+            position: relative;
             @media (min-width: 701px) {
                 font-size: 130%;
             } 
+            &::after{
+                content: "";
+                height: .2rem;
+                width: 4.5rem;
+                background-color: map-get($input-palette-verts, vert-clair);
+                position: absolute;
+                top: 2rem;
+                left: 0;
+            }
         }        
         &--card{
             @for $i from 1 through 4 {
@@ -109,7 +119,7 @@
                     text-overflow: ellipsis;
                     @include input-font-family (secondary-txt);
                     color: map-get($input-palette-gris, title-text);
-                    font-size: 110%;
+                    font-size: 90%;
                     @media (min-width: 701px) {
                         font-size: 85%;
                     } 

@@ -38,6 +38,51 @@
     transform: scaleY(1);
   }
 }
+.loading-spinner {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  background-color: #f0f0f0;
+  opacity: 0.9;
+  height: 100vh;
+  z-index: 2;
+  inset: 0;
+  animation: hidde-bg 0.5s 3s forwards;
+  transform-origin: top right;
+}
+.loading-spinner .spinner-top {
+  display: grid;
+  place-items: center;
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #99E2D0;
+  border-radius: 50%;
+  animation: loading-spinner 5s infinite linear;
+}
+.loading-spinner .spinner-top .spinner-bottom {
+  height: 100px;
+  width: 100px;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid #FF79DA;
+  border-radius: 50%;
+}
+
+@keyframes hidde-bg {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes loading-spinner {
+  to {
+    transform: rotate(3turn);
+  }
+}
+@keyframes loading-spinner-reverse {
+  to {
+    transform: rotate(-6turn);
+  }
+}
 * {
   font-family: "Roboto", Arial;
 }
@@ -242,7 +287,7 @@ footer h2 {
 }
 @media (max-width: 600px) {
   footer h2 {
-    font-size: 140%;
+    font-size: 105%;
   }
 }
 @media (min-width: 701px) {
@@ -328,7 +373,7 @@ footer ul li a i:hover {
 }
 @media (max-width: 600px) {
   .explore-block h1 {
-    font-size: 140%;
+    font-size: 105%;
   }
 }
 .explore-block p {
@@ -361,7 +406,7 @@ footer ul li a i:hover {
 }
 @media (max-width: 600px) {
   .operation__title {
-    font-size: 140%;
+    font-size: 105%;
   }
 }
 @media (max-width: 600px) {
@@ -483,7 +528,7 @@ footer ul li a i:hover {
 }
 @media (max-width: 600px) {
   .restaurants h2 {
-    font-size: 140%;
+    font-size: 105%;
   }
 }
 
@@ -649,11 +694,21 @@ footer ul li a i:hover {
   color: #454545;
   font-weight: 400;
   font-size: 170%;
+  position: relative;
 }
 @media (min-width: 701px) {
   .menu__block h2 {
     font-size: 130%;
   }
+}
+.menu__block h2::after {
+  content: "";
+  height: 0.2rem;
+  width: 4.5rem;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 2rem;
+  left: 0;
 }
 .menu__block--card {
   width: 100%;
@@ -701,7 +756,7 @@ footer ul li a i:hover {
 }
 @media (max-width: 600px) {
   .menu__block--card .card__presentation h3 {
-    font-size: 140%;
+    font-size: 105%;
   }
 }
 @media (min-width: 701px) {
@@ -713,7 +768,7 @@ footer ul li a i:hover {
   text-overflow: ellipsis;
   font-family: "Roboto-regular", Arial;
   color: #454545;
-  font-size: 110%;
+  font-size: 90%;
 }
 @media (min-width: 701px) {
   .menu__block--card .card__presentation--quote {

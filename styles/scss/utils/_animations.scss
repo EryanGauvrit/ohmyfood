@@ -28,3 +28,54 @@
         transform: scaleY(1);
     }
 }
+
+// loading spinner
+
+.loading-spinner{
+    display: grid;
+    place-items: center;
+    position: fixed;
+    background-color: map-get($input-palette-gris, bg);
+    opacity: 0.9;
+    height: 100vh;
+    z-index: 2;
+    inset: 0;
+    animation: hidde-bg 0.5s 3s forwards;
+    transform-origin: top right;
+    .spinner-top{
+        display: grid;
+        place-items: center;
+        height: 100px;
+        width: 100px;
+        border-right: 5px solid transparent;
+        border-top: 5px solid map-get($input-palette-verts, vert-clair);
+        border-radius: 50%;
+        animation: loading-spinner 5s infinite linear;
+        .spinner-bottom{
+            height: 100px;
+            width: 100px;
+            border-left: 5px solid transparent;
+            border-bottom: 5px solid map-get($input-palette-violets, rose);
+            border-radius: 50%;
+        }
+    }
+    
+}
+
+@keyframes hidde-bg {
+    to{
+        transform: scale(0);
+    }
+}
+
+@keyframes loading-spinner{
+    to{
+        transform: rotate(3turn);
+    }
+}
+
+@keyframes loading-spinner-reverse{
+    to{
+        transform: rotate(-6turn);
+    }
+}
