@@ -3,7 +3,7 @@ footer{
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    padding: 7% 0 7% 0;    
+    padding: 80px 0 80px 0;    
     background-color: map-get($input-palette-gris, title-text);
     @media (min-width: 701px) {
         justify-content: center;

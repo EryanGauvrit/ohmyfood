@@ -16,7 +16,7 @@
     } 
     &__heading{
         width: 90%;
-        padding: 34px 5% 50px 5%;
+        padding: 34px 35px 50px 35px;
         display: flex;
         align-items: baseline;
         justify-content: space-between;
@@ -29,7 +29,7 @@
         h1{
            @include input-font-family (title); 
            font-weight: 400;
-           max-width: 290px;
+           max-width: 300px;
            padding-right: 50px;
         }      
         i{
@@ -126,6 +126,9 @@
                     @media (min-width: 701px) {
                         font-size: 100%;
                     } 
+                    @media (max-width: 600px){
+                        font-size: 110%;
+                    };
                 }
                 &--quote{
                     text-overflow: ellipsis;

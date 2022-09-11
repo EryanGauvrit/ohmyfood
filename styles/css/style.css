@@ -263,7 +263,7 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  padding: 7% 0 7% 0;
+  padding: 80px 0 80px 0;
   background-color: #454545;
 }
 @media (min-width: 701px) {
@@ -284,7 +284,7 @@ footer h2 {
 }
 @media (max-width: 600px) {
   footer h2 {
-    font-size: 105%;
+    font-size: 155%;
   }
 }
 @media (min-width: 701px) {
@@ -352,12 +352,12 @@ footer ul li a i:hover {
   align-items: center;
   width: 100%;
   background-color: #f0f0f0;
-  padding: 6% 0 10% 0;
-  margin-bottom: 5%;
+  padding: 60px 0 70px 0;
+  margin-bottom: 45px;
 }
 @media (min-width: 701px) {
   .explore-block {
-    padding: 4% 0 4% 0;
+    padding: 45px 0 60px 0;
   }
 }
 .explore-block h1 {
@@ -370,7 +370,7 @@ footer ul li a i:hover {
 }
 @media (max-width: 600px) {
   .explore-block h1 {
-    font-size: 105%;
+    font-size: 155%;
   }
 }
 .explore-block p {
@@ -391,7 +391,7 @@ footer ul li a i:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 7%;
+  margin-bottom: 60px;
 }
 .operation__title {
   margin-bottom: 5%;
@@ -403,7 +403,7 @@ footer ul li a i:hover {
 }
 @media (max-width: 600px) {
   .operation__title {
-    font-size: 105%;
+    font-size: 155%;
   }
 }
 @media (max-width: 600px) {
@@ -496,24 +496,24 @@ footer ul li a i:hover {
 
 .restaurants {
   width: 100%;
-  height: 1500px;
+  height: 1320px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 10% 0 15% 0;
+  padding: 80px 0 130px 0;
   gap: 30px 0;
   background-color: #f0f0f0;
 }
 @media (min-width: 701px) {
   .restaurants {
     height: 500px;
-    padding: 10% 0 10% 0;
+    padding: 80px 0 80px 0;
     gap: 30px;
   }
 }
 @media (min-width: 1364px) {
   .restaurants {
-    gap: 50px 20%;
+    gap: 50px 100px;
   }
 }
 .restaurants h2 {
@@ -525,7 +525,7 @@ footer ul li a i:hover {
 }
 @media (max-width: 600px) {
   .restaurants h2 {
-    font-size: 105%;
+    font-size: 155%;
   }
 }
 
@@ -637,7 +637,7 @@ footer ul li a i:hover {
 }
 .menu__heading {
   width: 90%;
-  padding: 34px 5% 50px 5%;
+  padding: 34px 35px 50px 35px;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -653,7 +653,7 @@ footer ul li a i:hover {
 .menu__heading h1 {
   font-family: "Shrikhand", Arial;
   font-weight: 400;
-  max-width: 290px;
+  max-width: 300px;
   padding-right: 50px;
 }
 .menu__heading i {
@@ -765,12 +765,17 @@ footer ul li a i:hover {
 }
 @media (max-width: 600px) {
   .menu__block--card .card__presentation h3 {
-    font-size: 105%;
+    font-size: 155%;
   }
 }
 @media (min-width: 701px) {
   .menu__block--card .card__presentation h3 {
     font-size: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .menu__block--card .card__presentation h3 {
+    font-size: 110%;
   }
 }
 .menu__block--card .card__presentation--quote {
