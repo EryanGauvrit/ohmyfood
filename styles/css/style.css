@@ -327,23 +327,15 @@ footer ul li a {
     margin-bottom: 5%;
   }
 }
-footer ul li a:hover {
+footer ul li a:hover .link__underline {
   text-decoration: underline;
 }
 footer ul li a p {
   font-family: "Roboto-regular", Arial;
 }
 footer ul li a i {
-  margin-right: 2%;
+  margin-right: 10px;
   width: 30px;
-}
-@media (min-width: 701px) {
-  footer ul li a i {
-    margin-right: 5%;
-  }
-}
-footer ul li a i:hover {
-  text-decoration: none;
 }
 
 .explore-block {
@@ -633,6 +625,7 @@ footer ul li a i:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: baseline;
   }
 }
 .menu__heading {
@@ -653,7 +646,7 @@ footer ul li a i:hover {
 .menu__heading h1 {
   font-family: "Shrikhand", Arial;
   font-weight: 400;
-  max-width: 300px;
+  max-width: 305px;
   padding-right: 50px;
 }
 .menu__heading i {
@@ -710,14 +703,16 @@ footer ul li a i:hover {
   left: 0;
 }
 .menu__block--card {
+  position: relative;
   width: 100%;
-  height: 100px;
+  height: 90px;
   border-radius: 20px;
   background-color: white;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   box-shadow: 0px 0px 15px #b8b8b8;
   overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   animation: card-apparition 0.8s forwards linear;
 }
@@ -733,27 +728,31 @@ footer ul li a i:hover {
 .menu__block--card:nth-child(4) {
   animation-delay: 1.2s;
 }
+.menu__block--card:nth-child(5) {
+  animation-delay: 1.5s;
+}
 .menu__block--card:hover .card__check {
   transform: translateX(0);
 }
 .menu__block--card:hover .card__check i {
   transform: rotate(2turn);
 }
-.menu__block--card:hover .card__price {
-  transform: translateX(0);
+.menu__block--card:hover .card > .card__price {
+  padding-right: 85px;
 }
-.menu__block--card .card__presentation {
+.menu__block--card .card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menu__block--card .card .card__presentation {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 85px;
-  width: 290px;
   padding-left: 20px;
-  margin-top: auto;
-  margin-bottom: auto;
   overflow: hidden;
 }
-.menu__block--card .card__presentation h3 {
+.menu__block--card .card .card__presentation h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -764,52 +763,52 @@ footer ul li a i:hover {
   font-size: 110%;
 }
 @media (max-width: 600px) {
-  .menu__block--card .card__presentation h3 {
+  .menu__block--card .card .card__presentation h3 {
     font-size: 155%;
   }
 }
 @media (min-width: 701px) {
-  .menu__block--card .card__presentation h3 {
+  .menu__block--card .card .card__presentation h3 {
     font-size: 100%;
   }
 }
 @media (max-width: 600px) {
-  .menu__block--card .card__presentation h3 {
+  .menu__block--card .card .card__presentation h3 {
     font-size: 110%;
   }
 }
-.menu__block--card .card__presentation--quote {
+.menu__block--card .card .card__presentation--quote {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   font-family: "Roboto-regular", Arial;
   color: #454545;
-  font-size: 90%;
+  font-size: 100%;
 }
 @media (min-width: 701px) {
-  .menu__block--card .card__presentation--quote {
+  .menu__block--card .card .card__presentation--quote {
     font-size: 85%;
   }
 }
-.menu__block--card .card__price {
+.menu__block--card .card .card__price {
   font-family: "Roboto-regular", Arial;
   color: #454545;
   font-weight: bold;
   font-size: 120%;
-  margin-bottom: 1.5rem;
-  margin-right: 1rem;
-  margin-left: auto;
-  transform: translateX(4rem);
+  padding-right: 10px;
+  padding-left: 10px;
   transition: all 0.5s cubic-bezier(0.37, 0.05, 0, 0.91);
 }
 @media (min-width: 701px) {
-  .menu__block--card .card__price {
+  .menu__block--card .card .card__price {
     font-size: 95%;
   }
 }
 .menu__block--card .card__check {
+  position: absolute;
+  right: 0;
   border-radius: 0 20px 20px 0;
-  width: 6rem;
+  width: 5rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -822,7 +821,6 @@ footer ul li a i:hover {
 @media (max-width: 415px) {
   .menu__block--card .card__check {
     height: 8rem;
-    width: 5rem;
     transform: translateX(5rem);
   }
 }

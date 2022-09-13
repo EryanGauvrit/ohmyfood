@@ -46,21 +46,15 @@ footer{
                     font-size: 115%;
                     margin-bottom: 5%;                    
                 }
-                &:hover{
+                &:hover .link__underline{
                     text-decoration: underline;
                 }
                 p{
                     @include input-font-family (secondary-txt);
                 }
                 i{
-                    margin-right: 2%;
+                    margin-right: 10px;
                     width: 30px;
-                    @media (min-width: 701px) {
-                        margin-right: 5%;
-                    }
-                    &:hover{
-                        text-decoration: none;
-                    }
                 }
             }
         }

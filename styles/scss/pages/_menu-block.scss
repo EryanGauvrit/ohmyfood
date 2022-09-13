@@ -13,6 +13,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: baseline;
     } 
     &__heading{
         width: 90%;
@@ -29,7 +30,7 @@
         h1{
            @include input-font-family (title); 
            font-weight: 400;
-           max-width: 300px;
+           max-width: 305px;
            padding-right: 50px;
         }      
         i{
@@ -82,19 +83,21 @@
             }
         }        
         &--card{
-            @for $i from 1 through 4 {
+            @for $i from 1 through 5 {
                 &:nth-child(#{$i}){
                     animation-delay: 0.3s * $i;
                 }
             }
+            position: relative;
             width: 100%;
-            height: 100px;
+            height: 90px;
             border-radius: 20px;
             background-color: $color-white;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             @include global-shadow;
             overflow: hidden;
+            cursor: pointer;
             opacity: 0;
             animation: card-apparition 0.8s forwards linear;
             &:hover .card__check {
@@ -103,62 +106,63 @@
             &:hover .card__check i{
                 transform: rotate(2turn);
             }
-            &:hover .card__price{
-                transform: translateX(0);
+            &:hover .card > .card__price{
+                padding-right: 85px;
             }
-            .card__presentation{ 
+            .card{
+                width: 100%;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;  
-                height: 85px;
-                width: 290px;
-                padding-left: 20px; 
-                margin-top: auto;
-                margin-bottom: auto; 
-                overflow: hidden;           
-                h3{
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    margin-bottom: 10px;
-                    @include title;
-                    font-size: 110%;
-                    @media (min-width: 701px) {
-                        font-size: 100%;
-                    } 
-                    @media (max-width: 600px){
+                justify-content: space-between;
+                align-items: flex-end;
+                .card__presentation{ 
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 20px; 
+                    overflow: hidden;           
+                    h3{
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        margin-bottom: 10px;
+                        @include title;
                         font-size: 110%;
-                    };
+                        @media (min-width: 701px) {
+                            font-size: 100%;
+                        } 
+                        @media (max-width: 600px){
+                            font-size: 110%;
+                        };
+                    }
+                    &--quote{
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        @include input-font-family (secondary-txt);
+                        color: map-get($input-palette-gris, title-text);
+                        font-size: 100%;
+                        @media (min-width: 701px) {
+                            font-size: 85%;
+                        } 
+                    }
                 }
-                &--quote{
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
+                .card__price{
                     @include input-font-family (secondary-txt);
                     color: map-get($input-palette-gris, title-text);
-                    font-size: 90%;
+                    font-weight: bold;
+                    font-size: 120%;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    transition: all 0.5s $transition-duration;
                     @media (min-width: 701px) {
-                        font-size: 85%;
-                    } 
-                }
+                        font-size: 95%;
+                    }
+            }             
             }
-            .card__price{
-                @include input-font-family (secondary-txt);
-                color: map-get($input-palette-gris, title-text);
-                font-weight: bold;
-                font-size: 120%;
-                margin-bottom: 1.5rem;
-                margin-right: 1rem;
-                margin-left: auto;
-                transform: translateX(4rem);
-                transition: all 0.5s $transition-duration;
-                @media (min-width: 701px) {
-                    font-size: 95%;
-                } 
-            }
-            .card__check{                
+            .card__check{    
+                position: absolute;
+                right: 0;            
                 border-radius: 0 20px 20px 0;
-                width: 6rem;
+                width: 5rem;
                 height: 100%;
                 display: flex;
                 align-items: center;
@@ -169,7 +173,6 @@
                 transition: all .5s $transition-duration;
                 @media (max-width: 415px) {
                     height: 8rem;
-                    width: 5rem;
                     transform: translateX(5rem);
                 } 
                 @media (min-width: 701px) {
